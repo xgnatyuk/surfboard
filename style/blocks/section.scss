@@ -1,0 +1,15 @@
+.section {
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        color: rgba(41, 41, 41, 1);
+        text-align: center;
+    }
+}

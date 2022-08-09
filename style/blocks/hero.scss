@@ -10,5 +10,21 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        padding: 28px 0 61px;
+    }
+    &__title-section {
+        width: 46%;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        color: white;
+    }
+    &__desc {
+        margin-top: 17px;
+        margin-bottom: 39px;
+        font-size: 21px;
     }
 }

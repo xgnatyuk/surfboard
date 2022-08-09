@@ -1,0 +1,12 @@
+.feature {
+    display: flex;
+    &__icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 11px;
+    }
+    &__desc {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
