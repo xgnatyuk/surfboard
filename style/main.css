@@ -129,3 +129,25 @@ img {
   font-weight: 700;
   white-space: nowrap;
 }
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacts__icon-el {
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+.contacts__number {
+  font-size: 22px;
+  color: white;
+}
