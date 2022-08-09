@@ -254,7 +254,7 @@ img {
           justify-content: center;
 }
 .section--name--order {
-  background: url(../../img/bg-form.png);
+  background: url(../img/bg-form.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
