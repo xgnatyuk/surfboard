@@ -9,4 +9,7 @@ $phones: 480px;
 //base
 @import "base";
 //blocks
-@import "./blocks/media.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/contacts.scss";
