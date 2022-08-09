@@ -1,0 +1,12 @@
+$containerWidth: 940px;
+$baseFontSize:18px;
+//breakpoints
+$tablets:768px;
+$phones: 480px;
+// setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;800&family=Open+Sans:wght@400;700;800&display=swap');
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+//base
+@import "base";
+//blocks
+@import "./blocks/media.scss";

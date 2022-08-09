@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;800&family=Open+Sans:wght@400;700;800&display=swap");
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Alegreya Sans", "Opens sans";
+  font-weight: 400;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 940pxrem(20px);
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

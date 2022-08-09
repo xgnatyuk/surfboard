@@ -1,0 +1,79 @@
+html {
+    font-size: $baseFontSize;
+}
+
+body {
+    font-family: 'Alegreya Sans', 'Opens sans';
+    font-weight: 400;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-width: $containerWidth + rem(20px);
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: $containerWidth;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
