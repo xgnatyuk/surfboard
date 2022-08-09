@@ -17,11 +17,9 @@
         color: white;
         font-weight: 400;
         &:hover {
-            background: #FEDB3F;
-            color: #000000;
+            background: none;
+            color: #FEDB3F;
             font-weight: 800;
-            font-size: 16px;
-            text-transform: uppercase;
         }
     }
 }

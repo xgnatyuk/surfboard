@@ -1,8 +1,10 @@
 $containerWidth: 940px;
 $baseFontSize:18px;
+$z-fixed-menu:100;
 //breakpoints
 $tablets:768px;
 $phones: 480px;
+@import "./blocks/media.scss";
 // setups
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;800&family=Open+Sans:wght@400;700;800&display=swap');
 @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
@@ -20,3 +22,9 @@ $phones: 480px;
 @import "./blocks/headline.scss";
 @import "./blocks/benefits.scss";
 @import "./blocks/benefit.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/interactive-avatar.scss";
+@import "./blocks/form.scss";
+@import "./blocks/radio.scss";
+@import "./blocks/fixed-menu.scss";
+@import "./blocks/hamburger.scss";

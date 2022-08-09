@@ -4,6 +4,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &--name--order {
+        background: url(../../img/bg-form.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .section__title {
+            color: white;
+        }
+    }
     &__title {
         font-weight: 700;
         font-size: 48px;
