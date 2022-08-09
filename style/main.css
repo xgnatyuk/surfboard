@@ -82,12 +82,25 @@ img {
 }
 
 .hero {
-  background: url("../../img/bg-image.png");
+  background: url("../img/bg-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   min-height: 650px;
   color: white;
+}
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
 }
 
 .header {
@@ -150,4 +163,27 @@ img {
 .contacts__number {
   font-size: 22px;
   color: white;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: rgb(41, 41, 41);
+}
+.title--color--white {
+  color: white;
+}
+
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.features__item {
+  margin-right: 46px;
+}
+.features__item:last-child {
+  margin-right: 0;
 }

@@ -1,8 +1,14 @@
 .hero {
-    background: url("../../img/bg-image.png");
+    background: url("../img/bg-image.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     min-height: 650px;
     color: white;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
 }
