@@ -5,6 +5,9 @@
     }
     &__display-inner {
         display: flex;
+        @include tablets {
+            flex-direction: column;
+        }
     }
     &__avatar {
         width: rem(254px);

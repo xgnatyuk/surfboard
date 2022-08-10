@@ -1,5 +1,11 @@
 html {
     font-size: $baseFontSize;
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
 }
 
 body {

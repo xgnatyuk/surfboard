@@ -1,11 +1,19 @@
 .menu {
+    margin: 0 rem(30px);
+    padding-top: rem(6px);
+    @include tablets {
+        display: none;
+    }
     &__list {
         display: flex;
         flex-direction: row;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     &__item {
         margin-left: rem(22px);
+        margin-bottom: rem(10px);
         &:first-child {
             margin-left: 0;
         }
