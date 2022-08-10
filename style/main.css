@@ -293,9 +293,13 @@ img {
       flex-shrink: 0;
 }
 .contacts__icon-el {
-  width: 0.8333333333rem;
-  height: 0.8333333333rem;
+  width: 0.8888888889rem;
+  height: 0.8888888889rem;
   margin-right: 0.3333333333rem;
+  fill: white;
+}
+.contacts__icon-el--black {
+  fill: black;
 }
 .contacts__number {
   font-size: 1.2222222222rem;
@@ -951,4 +955,14 @@ img {
 }
 .socials__item:first-child {
   margin-left: 0;
+}
+
+.socials__icon-el {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: #B3B3B3;
+}
+.socials__icon-el:hover {
+  fill: black;
 }
