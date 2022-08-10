@@ -5,7 +5,7 @@
         align-items: center;
     }
     &__item {
-        margin-left: 22px;
+        margin-left: rem(22px);
         &:first-child {
             margin-left: 0;
         }

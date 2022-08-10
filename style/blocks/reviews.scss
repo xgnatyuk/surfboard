@@ -1,14 +1,14 @@
 .reviews {
     &__display {
         background: #F8FAF9;
-        padding: 42px;
+        padding: rem(42px);
     }
     &__display-inner {
         display: flex;
     }
     &__avatar {
-        width: 254px;
-        height: 264px;
+        width: rem(254px);
+        height: rem(264px);
     }
     &__avatar-photo {
         object-fit: cover;
@@ -17,16 +17,16 @@
     }
     &__content {
         flex: 1;
-        margin-left: 40px;
+        margin-left: rem(40px);
     }
     &__title {
         font-weight: 700;
-        font-size: 27px;
+        font-size: rem(27px);
         color: black;
-        margin-bottom: 14px;
+        margin-bottom: rem(14px);
     }
     &__text {
-        margin-bottom: 15px;
+        margin-bottom: rem(15px);
     }
     &__author {
         color: #292929;

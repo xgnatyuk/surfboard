@@ -1,23 +1,23 @@
 .form {
     display: flex;
-    margin-top: 60px;
+    margin-top: rem(60px);
     &__col {
         flex: 1;
-        margin-right: 26px;
+        margin-right: rem(26px);
         &:last-child {
             margin-right: 0;
         }
     }
     &__row {
         display: flex;
-        margin-bottom: 16px;
+        margin-bottom: rem(16px);
         &:last-child {
             margin-bottom: 0;
         }
     }
     &__block {
         flex: 1;
-        margin-right: 18px;
+        margin-right: rem(18px);
         &:last-child {
             margin-right: 0;
         }
@@ -27,15 +27,15 @@
     }
     &__input {
         width: calc(100% - 24px);
-        padding: 18px 12px;
-        border-radius: 4px;
+        padding: rem(18px) rem(12px);
+        border-radius: rem(4px);
         border: none;
         &:focus {
-            border: 3px solid #FEDB3F;
+            border: rem(3px) solid #FEDB3F;
             outline: none;
         }
         &--textarea {
-            min-height: 120px;
+            min-height: rem(120px);
             resize: none;
         }
     }
@@ -43,10 +43,10 @@
         display: flex;
         flex-wrap: wrap;
         &--down {
-            margin-top: 30px;
+            margin-top: rem(30px);
         }
     }
     &__btns {
-        margin-top: 44px;
+        margin-top: rem(44px);
     }
 }

@@ -3,12 +3,12 @@
     flex-direction: row;
     align-items: center;
     &__icon-el {
-        width: 15px;
-        height: 15px;
-        margin-right: 6px;
+        width: rem(15px);
+        height: rem(15px);
+        margin-right: rem(6px);
     }
     &__number {
-        font-size: 22px;
+        font-size: rem(22px);
         color: white;
         font-weight: 700;
     }

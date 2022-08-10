@@ -7,7 +7,7 @@
         &::before {
             content: url('../../img/circles.svg');
             position: absolute;
-            top: 50px;
+            top: rem(50px);
             right: 0;
             transform: translateX(50%);
         }

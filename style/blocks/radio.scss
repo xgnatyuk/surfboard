@@ -2,7 +2,7 @@
     display: flex;
     cursor: pointer;
     user-select: none;
-    margin-bottom: 14px;
+    margin-bottom: rem(14px);
     &:last-child {
         margin-bottom: 0;
     }
@@ -13,8 +13,8 @@
                 content: "";
                 background: url('../../icons/checkmark.svg');
                 background-repeat: no-repeat;
-                margin-top: 2px;
-                margin-left: 2px;
+                margin-top: rem(2px);
+                margin-left: rem(2px);
             }
         }
     }
@@ -27,17 +27,17 @@
         }
     }
     &__visible {
-        margin-right: 10px;
-        width: 25px;
-        height: 25px;
+        margin-right: rem(10px);
+        width: rem(25px);
+        height: rem(25px);
         position: relative;
         border-radius: 50%;
         background: white;
         &::before {
             content: "";
             display: none;
-            width: 13px;
-            height: 13px;
+            width: rem(13px);
+            height: rem(13px);
             background: rgba(254, 219, 63, 1);
             border-radius: 50%;
             position: absolute;
@@ -47,8 +47,8 @@
         }
     }
     &__title {
-        margin-right: 12px;
+        margin-right: rem(12px);
         color: white;
-        margin-top: 3px;
+        margin-top: rem(3px);
     }
 }

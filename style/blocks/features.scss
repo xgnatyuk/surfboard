@@ -1,8 +1,8 @@
 .features {
     display: flex;
     &__item {
-        margin-right: 46px;
-        max-width: 132px;
+        margin-right: rem(46px);
+        max-width: rem(132px);
         &:last-child {
             margin-right: 0;
         }

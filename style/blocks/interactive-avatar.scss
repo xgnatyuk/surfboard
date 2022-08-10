@@ -1,12 +1,12 @@
 .interactive-avatar {
-    width: 80px;
-    height: 80px;
-    border: 6px solid transparent;
+    width: rem(80px);
+    height: rem(80px);
+    border: rem(6px) solid transparent;
     border-radius: 50%;
     &--active {
         border-color: #FEDB3F;
-        width: 74px;
-        height: 74px;
+        width: rem(74px);
+        height: rem(74px);
     }
     &__link {
         display: block;
