@@ -4,5 +4,8 @@
     &__subtitle {
         margin-top: rem(17px);
         padding: 0 23%;
+        @include phones {
+            padding: 0 1%;
+        }
     }
 }

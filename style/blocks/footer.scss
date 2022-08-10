@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(20px) rem(80px);
+    font-size: rem(21px);
+    color: black;
+    @include phones {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.contacts.footer__contacts {
+    @include tablets {
+        display: flex;
+        margin-bottom: rem(6px);
+    }
+    @include phones {
+        justify-content: center;
+        margin-top: rem(12px);
+        margin-bottom: rem(19px);
+    }
+}

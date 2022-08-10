@@ -7,11 +7,18 @@
         display: flex;
         @include tablets {
             flex-direction: column;
+            text-align: center;
+            align-items: center;
         }
     }
     &__avatar {
         width: rem(254px);
         height: rem(264px);
+        @include tablets {
+            width: rem(130px);
+            height: rem(130px);
+            margin-bottom: rem(32px);
+        }
     }
     &__avatar-photo {
         object-fit: cover;

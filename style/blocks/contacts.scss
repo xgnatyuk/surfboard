@@ -15,5 +15,9 @@
         color: white;
         font-weight: 700;
         white-space: nowrap;
+        &--color--black {
+            color: black;
+            font-weight: 400;
+        }
     }
 }

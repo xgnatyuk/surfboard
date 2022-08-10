@@ -3,6 +3,12 @@
     top: 40%;
     right: 3%;
     z-index: $z-fixed-menu;
+    @include tablets {
+        display: none;
+    }
+    @include phones {
+        display: none;
+    }
     &__item {
         margin-bottom: rem(5px);
         &--active {

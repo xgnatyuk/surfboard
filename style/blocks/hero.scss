@@ -33,6 +33,9 @@
             padding: 0 rem(52px);
             text-align: center;
         }
+        @include phones {
+            padding: 0 rem(20px);
+        }
     }
     &__title {
         font-weight: 700;
@@ -40,11 +43,20 @@
         line-height: rem(58px);
         text-transform: uppercase;
         color: white;
+        @include phones {
+            font-size: rem(42px);
+        }
+        @media screen and (max-width: 425px) {
+            font-size: rem(34px);
+        }
     }
     &__desc {
         margin-top: rem(17px);
         margin-bottom: rem(39px);
         font-size: rem(21px);
+        @media screen and (max-width: 425px) {
+            max-width: rem(260px);
+        }
     }
     &__icons-section {
         @include tablets {
