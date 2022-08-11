@@ -41,12 +41,15 @@
         color: white;
     }
     &__input {
-        width: calc(100% - 24px);
+        width: calc(100% - rem(24px));
         padding: rem(18px) rem(12px);
         border-radius: rem(4px);
         border: none;
         @include tablets {
             padding: rem(8px) rem(10px);
+        }
+        @include phones {
+            width: 100%;
         }
         &:focus {
             border: rem(3px) solid #FEDB3F;

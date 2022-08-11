@@ -222,6 +222,9 @@ img {
     background: rgb(25, 104, 177);
     width: 100%;
     padding: 1.4444444444rem 1.6666666667rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -380,6 +383,11 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 575px) {
+  .section {
+    height: 100%;
+  }
 }
 .section--name--order {
   background: url(../img/bg-form.png);
@@ -705,7 +713,7 @@ img {
   color: white;
 }
 .form__input {
-  width: calc(100% - 24px);
+  width: calc(100% - 1.3333333333rem);
   padding: 1rem 0.6666666667rem;
   border-radius: 0.2222222222rem;
   border: none;
@@ -715,6 +723,11 @@ img {
     padding: 0.4444444444rem 0.5555555556rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form__input {
+    width: 100%;
   }
 }
 .form__input:focus {
