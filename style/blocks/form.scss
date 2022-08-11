@@ -10,7 +10,7 @@
     }
     &__col {
         flex: 1;
-        margin-right: rem(26px);
+        margin-right: rem(24px);
         &:last-child {
             margin-right: 0;
         }
@@ -41,15 +41,12 @@
         color: white;
     }
     &__input {
-        width: calc(100% - rem(24px));
+        width: 100%;
         padding: rem(18px) rem(12px);
         border-radius: rem(4px);
         border: none;
         @include tablets {
             padding: rem(8px) rem(10px);
-        }
-        @include phones {
-            width: 100%;
         }
         &:focus {
             border: rem(3px) solid #FEDB3F;

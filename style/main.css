@@ -670,7 +670,7 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 1.4444444444rem;
+  margin-right: 1.3333333333rem;
 }
 .form__col:last-child {
   margin-right: 0;
@@ -713,7 +713,7 @@ img {
   color: white;
 }
 .form__input {
-  width: calc(100% - 1.3333333333rem);
+  width: 100%;
   padding: 1rem 0.6666666667rem;
   border-radius: 0.2222222222rem;
   border: none;
@@ -723,11 +723,6 @@ img {
     padding: 0.4444444444rem 0.5555555556rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-  }
-}
-@media screen and (max-width: 480px) {
-  .form__input {
-    width: 100%;
   }
 }
 .form__input:focus {
