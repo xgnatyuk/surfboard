@@ -384,7 +384,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 760px) {
   .section {
     height: 100%;
   }
@@ -406,6 +406,9 @@ img {
   .section--name--order .section__title {
     font-size: 1.8888888889rem;
   }
+}
+.section--name--product {
+  background: #F8FAF9;
 }
 .section__title {
   font-weight: 700;
@@ -973,4 +976,91 @@ img {
 }
 .socials__icon-el:hover {
   fill: black;
+}
+
+.products__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .products__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+.products__visual {
+  width: 100%;
+  max-width: 23.3333333333rem;
+}
+.products__info {
+  max-width: 20.7777777778rem;
+  margin-left: 3.1111111111rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+@media screen and (max-width: 768px) {
+  .products__info {
+    max-width: 29.3333333333rem;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+.products__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 1.3333333333rem;
+}
+.products__desc {
+  margin-bottom: 1.3333333333rem;
+}
+.products__properties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.products__properties__size {
+  margin-bottom: 1.3333333333rem;
+}
+.products__properties__size:last-child {
+  margin-left: 1.3333333333rem;
+}
+.products__properties__size-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.products__properties__size-desc {
+  color: black;
+  font-weight: 700;
+}
+.products__properties__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.products__properties__price {
+  font-weight: 300;
+  font-size: 3.3333333333rem;
+  margin-right: 1.5555555556rem;
 }
