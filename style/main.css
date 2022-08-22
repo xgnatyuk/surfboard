@@ -1208,7 +1208,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 7.4444444444rem 0;
+  padding-top: 9rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
