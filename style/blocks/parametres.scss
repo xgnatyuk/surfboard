@@ -1,0 +1,67 @@
+.parametres {
+    display: flex;
+    align-items: flex-start;
+    @include tablets {
+        display: none;
+    }
+    @include phones {
+        display: none;
+    }
+    &__link {
+        width: 90px;
+        height: 90px;
+        background: #3465A3;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: rem(52px);
+        &:hover {
+            background: #457bc1;
+        }
+    }
+    &__multi-arrows {
+        width: 38px;
+        height: 38px;
+    }
+    &__title {
+        color: white;
+        text-transform: uppercase;
+        font-size: rem(14px);
+        margin-top: rem(8px);
+    }
+    &__list {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: rem(4px) rem(4px) rem(40px) rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(40px);
+        border-radius: rem(4px);
+        max-width: rem(274px);
+        padding: rem(18px) rem(14px);
+        display: none;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: rem(8px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__icon {
+        width: 32px;
+        height: 32px;
+    }
+    &__desc {
+        margin-left: rem(12px);
+        color: black;
+        font-size: rem(16px);
+        font-weight: 700;
+    }
+    &__data {
+        flex: 1;
+        margin-left: rem(26px);
+        text-align: end;
+        color: black;
+    }
+}

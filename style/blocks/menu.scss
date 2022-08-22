@@ -17,10 +17,27 @@
         &:first-child {
             margin-left: 0;
         }
+        &--column {
+            margin-left: 0;
+            margin-bottom: rem(36px);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
     &__link {
         color: white;
         font-weight: 700;
         white-space: nowrap;
+        &--column {
+            font-weight: 400;
+            font-size: 36px;
+        }
+    }
+    &--column {
+        display: block;
+        .menu__list {
+            flex-direction: column;
+        }
     }
 }

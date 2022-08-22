@@ -1,0 +1,21 @@
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(134px) 0;
+    transition: 0.5s;
+    &__close {
+        position: absolute;
+        top: 42px;
+        right: 42px;
+    }
+    &.open {
+        left: 0;
+    }
+}

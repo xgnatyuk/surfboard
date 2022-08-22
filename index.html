@@ -50,7 +50,7 @@
                           </span>
                             <span class="contacts__number">8 800 903 90 90</span>
                         </a>
-                        <a href="" class="hamburger">
+                        <a href="#" class="hamburger" data-menu="open">
                             <span class="hamburger__plank"></span>
                             <span class="hamburger__plank"></span>
                             <span class="hamburger__plank"></span>
@@ -155,42 +155,105 @@
             <section class="section section--name--product">
                 <div class="container">
                     <div class="products">
-                        <ul class="products__list">
-                            <li class="products__item">
-                                <div class="products__visual">
-                                    <img src="./img/lonboard.svg" alt="long board image" class="products__image">
-                                </div>
-                                <div class="products__info">
-
-                                    <h4 class="products__title">Лонгборд 2.0</h4>
-                                    <div class="products__desc">
-                                        <p>Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий
-                                            ехать по ним.
-                                        </p>
+                        <div class="products__arrows">
+                            <a href="#" class="products__arrow">
+                                <img src="./img/arr-left.svg" alt="" class="products__arrow-icon">
+                            </a>
+                            <ul class="products__list">
+                                <li class="products__item">
+                                    <div class="products__arrows products__arrows--resp">
+                                        <a href="#" class="products__arrow">
+                                            <img src="./img/arr-left.svg" alt="" class="products__arrow-icon products__arrow-icon-resp">
+                                        </a>
+                                        <div class="products__visual">
+                                            <img src="./img/lonboard.svg" alt="long board image" class="products__image">
+                                        </div>
+                                        <a href="#" class="products__arrow">
+                                            <img src="./img/arr-right.svg" alt="" class="products__arrow-icon products__arrow-icon-resp">
+                                        </a>
                                     </div>
-                                    <div class="products__properties">
-                                        <ul class="products__size">
-                                            <li class="products__size-item">
-                                                <span class="products__size-title">Длина доски</span>
-                                                <span class="products__size-desc">от 2,5 метров</span>
-                                            </li>
-                                        </ul>
-                                        <ul class="products__size">
-                                            <li class="products__size-item">
-                                                <span class="products__size-title">Ширина доски</span>
-                                                <span class="products__size-desc">от 40 сантиметров</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="products__footer">
-                                        <div class="products__price">7000 ₽</div>
-                                        <button class="btn">Заказать</button>
-                                    </div>
-                                </div>
+                                    <div class="products__info">
+                                        <div class="parametres">
+                                            <a href="#" class="parametres__link" id="parametres-btn">
+                                                <svg class="parametres__multi-arrows">
+                                                <use xlink href="./icons/sprite.svg#multi-arrows"></use>
+                                            </svg>
+                                                <span class="parametres__title">Параметры</span>
+                                            </a>
 
-                            </li>
+                                            <ul class="parametres__list" id="element">
+                                                <li class="parametres__item">
+                                                    <svg class="parametres__icon">
+                                                        <use xlink href="./icons/sprite.svg#length"></use>
+                                                    </svg>
+                                                    <div class="parametres__desc">Длина доски</div>
+                                                    <div class="parametres__data">от 2,5 м</div>
+                                                </li>
+                                                <li class="parametres__item">
+                                                    <svg class="parametres__icon">
+                                                        <use xlink href="./icons/sprite.svg#width"></use>
+                                                    </svg>
+                                                    <div class="parametres__desc">Ширина доски</div>
+                                                    <div class="parametres__data">от 40 см</div>
+                                                </li>
+                                                <li class="parametres__item">
+                                                    <svg class="parametres__icon">
+                                                        <use xlink href="./icons/sprite.svg#thickness"></use>
+                                                    </svg>
+                                                    <div class="parametres__desc">Толщина</div>
+                                                    <div class="parametres__data">8 см</div>
+                                                </li>
+                                                <li class="parametres__item">
+                                                    <svg class="parametres__icon">
+                                                        <use xlink href="./icons/sprite.svg#life-time"></use>
+                                                    </svg>
+                                                    <div class="parametres__desc">Срок службы</div>
+                                                    <div class="parametres__data">5 лет</div>
+                                                </li>
+                                                <li class="parametres__item">
+                                                    <svg class="parametres__icon">
+                                                        <use xlink href="./icons/sprite.svg#weight"></use>
+                                                    </svg>
+                                                    <div class="parametres__desc">Вес</div>
+                                                    <div class="parametres__data">7-8 кг</div>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-                        </ul>
+                                        <h4 class="products__title">Лонгборд 2.0</h4>
+                                        <div class="products__desc">
+                                            <p>Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий
+                                                ехать по ним.
+                                            </p>
+                                        </div>
+                                        <div class="products__properties">
+                                            <ul class="products__size">
+                                                <li class="products__size-item">
+                                                    <span class="products__size-title">Длина доски</span>
+                                                    <span class="products__size-desc">от 2,5 метров</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="products__size">
+                                                <li class="products__size-item">
+                                                    <span class="products__size-title">Ширина доски</span>
+                                                    <span class="products__size-desc">от 40 сантиметров</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="products__footer">
+                                            <div class="products__price">7000 ₽</div>
+                                            <button class="btn">Заказать</button>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                            <a href="#" class="products__arrow">
+                                <img src="./img/arr-right.svg" alt="" class="products__arrow-icon">
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -375,6 +438,7 @@
             </div>
 
         </footer>
+        
     </div>
 
     </div>
@@ -409,6 +473,39 @@
             </li>
         </ul>
     </nav>
+    <div class="fullscreen-menu" id="full-menu">
+        <nav class="menu menu--column">
+            <ul class="menu__list">
+                <li class="menu__item menu__item--column">
+                    <a href="#" class="menu__link menu__link--column">О нас</a>
+                </li>
+                <li class="menu__item menu__item--column">
+                    <a href="#" class="menu__link menu__link--column">Серфборды</a>
+                </li>
+                <li class="menu__item menu__item--column">
+                    <a href="#" class="menu__link menu__link--column">Команда</a>
+                </li>
+                <li class="menu__item menu__item--column">
+                    <a href="#" class="menu__link menu__link--column">Меню</a>
+                </li>
+                <li class="menu__item menu__item--column">
+                    <a href="#" class="menu__link menu__link--column">Отзывы</a>
+                </li>
+                <li class="menu__item menu__item--column">
+                    <a href="#" class="menu__link menu__link--column">Как мы работаем</a>
+                </li>
+                <li class="menu__item menu__item--column">
+                    <a href="#" class="menu__link menu__link--column">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="close fullscreen-menu__close" data-menu="close">
+           <svg class="close__el">
+            <use xlink href="./icons/sprite.svg#close"></use>
+        </svg>
+        </button>
+    </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
