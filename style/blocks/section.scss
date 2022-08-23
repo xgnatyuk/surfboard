@@ -7,6 +7,12 @@
     @media screen and (max-width: 770px) {
         height: 100%;
     }
+    @include tablets {
+        height: 100%;
+    }
+    @include phones {
+        height: 100%;
+    }
     &--name--order {
         background: url(../img/bg-form.png);
         background-repeat: no-repeat;

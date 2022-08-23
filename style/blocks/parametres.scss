@@ -1,11 +1,23 @@
 .parametres {
-    display: flex;
-    align-items: flex-start;
+    position: relative;
+    display: inline-block;
+    max-height: rem(180px);
     @include tablets {
         display: none;
     }
-    @include phones {
-        display: none;
+    &:hover .parametres__menu {
+        left: 0;
+        opacity: 1;
+    }
+    &__multi-arrows {
+        width: rem(38px);
+        height: rem(38px);
+    }
+    &__title {
+        color: white;
+        text-transform: uppercase;
+        font-size: rem(14px);
+        margin-top: rem(8px);
     }
     &__link {
         width: 90px;
@@ -16,29 +28,33 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: rem(52px);
         &:hover {
             background: #457bc1;
         }
     }
-    &__multi-arrows {
-        width: 38px;
-        height: 38px;
-    }
-    &__title {
-        color: white;
-        text-transform: uppercase;
-        font-size: rem(14px);
-        margin-top: rem(8px);
-    }
-    &__list {
+    &__menu {
+        position: absolute;
         background: rgba(255, 255, 255, 0.8);
-        box-shadow: rem(4px) rem(4px) rem(40px) rgba(0, 0, 0, 0.06);
-        backdrop-filter: blur(40px);
+        padding: rem(28px) rem(30px);
+        width: rem(290px);
+        left: rem(-9999px);
+        color: #1E1F20;
+        font-size: rem(16px);
+        font-weight: 500;
+        opacity: 0.8;
+        transition: opacity 1s;
         border-radius: rem(4px);
-        max-width: rem(274px);
-        padding: rem(18px) rem(14px);
-        display: none;
+        margin-top: rem(-92px);
+        margin-left: rem(90px);
+        &::before {
+            content: "";
+            display: block;
+            height: rem(30px);
+            right: 0;
+            width: 100%;
+            bottom: 100%;
+            position: absolute;
+        }
     }
     &__item {
         display: flex;

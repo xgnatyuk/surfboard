@@ -20,12 +20,12 @@ var menu = new FullMenu('#full-menu')
 
 
 
-const targetDiv = document.getElementById("element");
-const parametres = document.getElementById("parametres-btn");
-parametres.onclick = function() {
-    if (targetDiv.style.display == "none") {
-        targetDiv.style.display = "block";
-    } else {
-        targetDiv.style.display = "none";
-    }
-};
+// const targetDiv = document.getElementById("element");
+// const parametres = document.getElementById("parametres-btn");
+// parametres.onclick = function() {
+//     if (targetDiv.style.display == "none") {
+//         targetDiv.style.display = "block";
+//     } else {
+//         targetDiv.style.display = "none";
+//     }
+// };
