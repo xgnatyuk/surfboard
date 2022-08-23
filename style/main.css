@@ -409,6 +409,13 @@ img {
     height: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  .section {
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
 @media screen and (max-width: 480px) {
   .section {
     height: 100vh;
