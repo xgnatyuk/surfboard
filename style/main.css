@@ -676,7 +676,7 @@ img {
 }
 .reviews__author {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #292929;
 }
 .reviews__switcher {
@@ -1055,6 +1055,11 @@ img {
   fill: black;
 }
 
+.products__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .products__arrows {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1437,6 +1442,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  display: none;
   height: 0;
   overflow: hidden;
 }
@@ -1445,16 +1451,15 @@ img {
   color: black;
 }
 
-.active .team__info {
+.team__item--active .team__info {
   min-height: 3.8888888889rem;
-  overflow: none;
 }
 
-.active .team__triangle {
+.team__item--active .team__triangle {
   display: none;
 }
 
-.active .team__triangle-up {
+.team__item--active .team__triangle-up {
   display: block;
   width: 0;
   height: 0;

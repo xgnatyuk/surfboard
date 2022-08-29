@@ -39,3 +39,35 @@ $(".interactive-avatar__link").click(e => {
     itemToShow.addClass("active").siblings().removeClass("active");
     curItem.addClass("active").siblings().removeClass("active");
 });
+
+//team 
+const teamMember = document.querySelector(".team__member");
+const teamInfo = document.querySelector(".team__info");
+teamMember.addEventListener('click', function(){
+    if(teamInfo.style.display == 'none') {
+        teamInfo.style.display = 'flex';
+    } else {
+        teamInfo.style.display = 'none';
+    }
+
+    });
+
+
+
+
+
+//slider 
+// const slider = $('.products__list').bxSlider({
+//     pager: false,
+//     controls: false
+//   });
+  
+//   $('.products__arrow-left').click(e => {
+//     e.preventDefault();
+//     slider.goToPrevSlide();
+//   })
+  
+//   $('.products__arrow-right').click(e => {
+//     e.preventDefault();
+//     slider.goToNextSlide();
+//   })

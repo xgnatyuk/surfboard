@@ -1,4 +1,8 @@
 .products {
+  
+    &__list {
+        display: flex;
+    }
     &__arrows {
         display: flex;
         justify-content: space-between;
