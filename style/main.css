@@ -1397,6 +1397,7 @@ img {
 }
 .team__item {
   margin-right: 1.1111111111rem;
+  max-height: 25.2222222222rem;
 }
 .team__item:last-child {
   margin-right: 0;
@@ -1417,6 +1418,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .team__name {
   color: black;
@@ -1442,25 +1444,17 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  display: none;
-  height: 0;
-  overflow: hidden;
 }
 .team__position {
   margin-bottom: 0.2222222222rem;
   color: black;
 }
 
-.team__item--active .team__info {
-  min-height: 3.8888888889rem;
-}
-
-.team__item--active .team__triangle {
+.hidden {
   display: none;
 }
 
-.team__item--active .team__triangle-up {
-  display: block;
+.team__triangle-up {
   width: 0;
   height: 0;
   border-left: 4px solid transparent;

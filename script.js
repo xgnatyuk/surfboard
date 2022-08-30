@@ -41,16 +41,19 @@ $(".interactive-avatar__link").click(e => {
 });
 
 //team 
-const teamMember = document.querySelector(".team__member");
-const teamInfo = document.querySelector(".team__info");
-teamMember.addEventListener('click', function(){
-    if(teamInfo.style.display == 'none') {
-        teamInfo.style.display = 'flex';
-    } else {
-        teamInfo.style.display = 'none';
-    }
+const teamMember = document.getElementsByClassName("team__member");
+const teamInfo = document.getElementsByClassName("team__info");
+const triangleUp = document.getElementsByClassName("team__triangle-up");
+const triangle = document.getElementsByClassName("team__triangle");
 
+for (let i = 0; i < teamMember.length; i++) {
+    teamMember[i].addEventListener('click', function(){ 
+        teamInfo[i].classList.toggle('hidden');
+        triangleUp[i].classList.toggle('hidden');
+        triangle[i].classList.toggle('hidden');
     });
+}
+
 
 
 
