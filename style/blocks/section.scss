@@ -17,6 +17,12 @@
         background: url(../img/bg-form.png);
         background-repeat: no-repeat;
         background-size: cover;
+        @include tablets {
+            height: 100vh;
+        }
+        @include phones {
+            height: 100vh;
+        }
         .section__title {
             color: white;
             @include phones {

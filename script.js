@@ -1,4 +1,20 @@
-//fullscreen menu
+// slider
+   const slider = $('.products__list').bxSlider({
+        pager: false,
+        controls: false
+
+    });
+    $('.products__arrow-left').click(e => {
+        e.preventDefault();
+        slider.goToPrevSlide();
+      })
+      
+      $('.products__arrow-right').click(e => {
+        e.preventDefault();
+        slider.goToNextSlide();
+      })
+
+// fullscreen menu
 class FullMenu {
     constructor(selector) {
         this.menu = document.querySelector(selector)
@@ -40,7 +56,7 @@ $(".interactive-avatar__link").click(e => {
     curItem.addClass("active").siblings().removeClass("active");
 });
 
-//team 
+// team 
 const teamMember = document.getElementsByClassName("team__member");
 const teamInfo = document.getElementsByClassName("team__info");
 const triangleUp = document.getElementsByClassName("team__triangle-up");
@@ -51,26 +67,16 @@ for (let i = 0; i < teamMember.length; i++) {
         teamInfo[i].classList.toggle('hidden');
         triangleUp[i].classList.toggle('hidden');
         triangle[i].classList.toggle('hidden');
+        for (let a = 0; a < teamMember.length; a++) {
+            if (a !== i) {
+                if(!teamInfo[a].classList.contains('hidden')) {
+                    teamInfo[a].classList.add('hidden');
+                    triangleUp[a].classList.add('hidden');
+                    triangle[a].classList.remove('hidden');
+                }
+            }
+        }
     });
 }
 
 
-
-
-
-
-//slider 
-// const slider = $('.products__list').bxSlider({
-//     pager: false,
-//     controls: false
-//   });
-  
-//   $('.products__arrow-left').click(e => {
-//     e.preventDefault();
-//     slider.goToPrevSlide();
-//   })
-  
-//   $('.products__arrow-right').click(e => {
-//     e.preventDefault();
-//     slider.goToNextSlide();
-//   })
