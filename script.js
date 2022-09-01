@@ -77,6 +77,4 @@ for (let i = 0; i < teamMember.length; i++) {
             }
         }
     });
-}
-
-
+};
