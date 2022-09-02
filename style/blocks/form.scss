@@ -76,3 +76,12 @@
         margin-top: rem(30px);
     }
 }
+
+.text__error {
+    color: red;
+    
+}
+
+.form__input-error {
+    border: solid rem(3px) red;
+}

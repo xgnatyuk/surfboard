@@ -78,3 +78,45 @@ for (let i = 0; i < teamMember.length; i++) {
         }
     });
 };
+
+// form validation 
+
+const form = document.querySelector('#form_order')
+const sendBtn = document.querySelector('#send_btn')
+sendBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    if(isFormValid(form)) {
+        console.log('send to server')
+    }
+    else {
+        console.log('do not send to server, form is invalid')
+    }
+})
+
+function isFormValid(form) {
+    let isValid = true 
+
+    if(!validation(form.elements.name)) {
+        isValid = false
+    }
+    if(!validation(form.elements.phone)) {
+        isValid = false
+    }
+    if(!validation(form.elements.comment)) {
+        isValid = false
+    }
+    return isValid
+}
+
+function validation(element) {
+    if(!element.checkValidity()) {
+        element.nextElementSibling.textContent = element.validationMessage
+        element.classList.add('form__input-error')
+        return false
+    }
+    else {
+        element.nextElementSibling.textContent = ''
+        element.classList.remove('form__input-error')
+        return true
+    }
+}
