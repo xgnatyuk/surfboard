@@ -82,7 +82,40 @@ for (let i = 0; i < teamMember.length; i++) {
 // form validation 
 
 const form = document.querySelector('#form_order')
+const phone = document.querySelector('#phone')
 const sendBtn = document.querySelector('#send_btn')
+
+phone.addEventListener('keydown', (e) => {
+let isDigit = false 
+let isPlus = false 
+let isDash = false 
+let isAction = false
+
+if(e.key >= 0 || e.key <= 9) {
+    isDigit = true
+}
+if (e.key == '+') {
+    isPlus = true
+}
+
+if (e.key == '-') {
+    isDash = true
+}
+
+if (e.key == 'ArrowRight' || 
+    e.key == 'ArrowLeft' ||
+    e.key == 'Backspace'
+    ) { 
+        isAction = true
+    }
+
+if(!isDigit && !isPlus && !isDash && !isAction) {
+    e.preventDefault()
+}
+
+})
+
+
 sendBtn.addEventListener('click', (e) => {
     e.preventDefault()
     if(isFormValid(form)) {
