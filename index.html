@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
     <link rel="stylesheet" href="./style/main.css">
     <title>Surfboard</title>
 
@@ -309,7 +313,7 @@
                             </li>
                           </ul>
                           <div class="products__footer">
-                            <div class="products__price">7000 ₽</div>
+                            <div class="products__price">12000 ₽</div>
                             <button class="btn">Заказать</button>
                           </div>
                         </div>
@@ -477,6 +481,7 @@
                     <h1 class="section__title">Закажите доставку</h1>
                     <div class="order__form">
                         <form class="form" id="form_order">
+                            <input type="hidden" name="to" value="somewhere@mail.ru">
                             <div class="form__col">
                                 <div class="form__row">
                                     <label class="form__block">
@@ -718,8 +723,15 @@
         </svg>
         </button>
     </div>
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <div class="modal__message">Сообщение отправлено</div>
+            <button class="btn js-submit-btn">Закрыть</button>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="./script.js"></script>
 </body>
 

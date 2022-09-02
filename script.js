@@ -14,6 +14,8 @@
         slider.goToNextSlide();
       })
 
+
+
 // fullscreen menu
 class FullMenu {
     constructor(selector) {
@@ -34,6 +36,7 @@ class FullMenu {
     }
 }
 var menu = new FullMenu('#full-menu')
+
 
 
 
@@ -81,75 +84,239 @@ for (let i = 0; i < teamMember.length; i++) {
 
 // form validation 
 
-const form = document.querySelector('#form_order')
-const phone = document.querySelector('#phone')
-const sendBtn = document.querySelector('#send_btn')
+// const form = document.querySelector('#form_order')
+// const phone = document.querySelector('#phone')
+// const sendBtn = document.querySelector('#send_btn')
 
-phone.addEventListener('keydown', (e) => {
-let isDigit = false 
-let isPlus = false 
-let isDash = false 
-let isAction = false
+// phone.addEventListener('keydown', (e) => {
+// try {
+//     let isDigit = false 
+//     let isPlus = false 
+//     let isDash = false 
+//     let isAction = false
 
-if(e.key >= 0 || e.key <= 9) {
-    isDigit = true
-}
-if (e.key == '+') {
-    isPlus = true
-}
+//     if(e.key >= 0 || e.key <= 9) {
+//        isDigit = true
+//     }
 
-if (e.key == '-') {
-    isDash = true
-}
+//     if (e.key == '+') {
+//         isPlus = true
+//     }
 
-if (e.key == 'ArrowRight' || 
-    e.key == 'ArrowLeft' ||
-    e.key == 'Backspace'
+//     if (e.key == '-') {
+//         isDash = true
+//     }
+
+//     if (e.key == 'ArrowRight' || 
+//         e.key == 'ArrowLeft' ||
+//         e.key == 'Backspace'
+//     ) { 
+//         isAction = true
+//     }
+
+//     if(!isDigit && !isPlus && !isDash && !isAction) {
+//     throw new Error ('Можно вводить только цифры, +, -')
+//     }
+//     e.target.nextElementSibling.textContent = ''
+//     e.target.classList.remove('form__input-error')
+
+// } catch (error) {
+//     e.target.nextElementSibling.textContent = error.message
+//     e.target.classList.add('form__input-error')
+//     e.preventDefault()
+    
+// }
+
+// })
+
+
+// sendBtn.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     if(isFormValid(form)) {
+//         console.log('send to server')
+//     }
+//     else {
+//         console.log('do not send to server, form is invalid')
+//     }
+// })
+
+// function isFormValid(form) {
+//     let isValid = true 
+
+//     if(!validation(form.elements.name)) {
+//         isValid = false
+//     }
+//     if(!validation(form.elements.phone)) {
+//         isValid = false
+//     }
+//     if(!validation(form.elements.comment)) {
+//         isValid = false
+//     }
+//     return isValid
+// }
+
+// function validation(element) {
+//     if(!element.checkValidity()) {
+//         element.nextElementSibling.textContent = element.validationMessage
+//         element.classList.add('form__input-error')
+//         return false
+//     }
+//     else {
+//         element.nextElementSibling.textContent = ''
+//         element.classList.remove('form__input-error')
+//         return true
+//     }
+// }
+
+// modal 
+
+// $('.form').submit(e => {
+//     e.preventDefault();
+//     const fancybox = Fancybox.show(
+//         {
+//           src: "#modal",
+//           type: "inline",
+//         })
+//     });
+
+
+// form 
+
+    phone.addEventListener('keydown', (e) => {
+try {
+    let isDigit = false 
+    let isPlus = false 
+    let isDash = false 
+    let isAction = false
+
+    if(e.key >= 0 || e.key <= 9) {
+       isDigit = true
+    }
+
+    if (e.key == '+') {
+        isPlus = true
+    }
+
+    if (e.key == '-') {
+        isDash = true
+    }
+
+    if (e.key == 'ArrowRight' || 
+        e.key == 'ArrowLeft' ||
+        e.key == 'Backspace'
     ) { 
         isAction = true
     }
 
-if(!isDigit && !isPlus && !isDash && !isAction) {
+    if(!isDigit && !isPlus && !isDash && !isAction) {
+    throw new Error ('Можно вводить только цифры, +, -')
+    }
+    e.target.nextElementSibling.textContent = ''
+    e.target.classList.remove('form__input-error')
+
+} catch (error) {
+    e.target.nextElementSibling.textContent = error.message
+    e.target.classList.add('form__input-error')
     e.preventDefault()
+    
 }
 
 })
 
+const validateFields = (form, fieldsArray) => {
 
-sendBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    if(isFormValid(form)) {
-        console.log('send to server')
-    }
-    else {
-        console.log('do not send to server, form is invalid')
-    }
+    fieldsArray.forEach(field => {
+      field.removeClass("form__input-error");
+      if (field.val().trim() === "") {
+        field.addClass("form__input-error");
+      }
+    })
+
+    const errorFields = form.find(".form__input-error");
+
+    return errorFields.length === 0;
+  }
+
+
+$('.form').submit(e => {
+    e.preventDefault();
+    
+    const form  = $(e.currentTarget);
+    const name = form.find("[name='name']");
+    const phone = form.find("[name='phone']");
+    const comment = form.find("[name='comment']");
+    const to = form.find("[name='to']");
+
+    const modal = $('#modal');
+    const content = modal.find(".modal__message");
+
+    modal.removeClass("error-modal");
+
+    const isValid = validateFields(form, [name, phone, comment, to]);
+
+    if (isValid) {
+    $.ajax({
+        url: "https://webdev-api.loftschool.com/sendmail", 
+        method: "post",
+        data: {
+            name: name.val(),
+            phone: phone.val(),
+            comment: comment.val(),
+            to: to.val(),
+        },
+
+        success: data => {
+            content.text(data.message)
+            const fancybox = new Fancybox([
+                {
+                  src: "#modal",
+                  type: "inline",
+                },
+            ]);
+        
+            $('.js-submit-btn').click(e =>{
+            e.preventDefault();
+    
+            fancybox.close();
+        }); 
+        },
+
+        error: data => {
+            const message = data.responseJSON ? data.responseJSON.message:"Отправить письмо не удалось, повторите запрос позднее";
+            content.text(message);
+          
+
+            const fancybox = new Fancybox([
+                {
+                  src: "#modal",
+                  type: "inline",
+                },
+            ]);
+        
+            $('.js-submit-btn').click(e =>{
+            e.preventDefault();
+    
+            fancybox.close();
+        }); 
+        }
+    })
+}
+    // const fancybox = new Fancybox([
+    //         {
+    //           src: "#modal",
+    //           type: "inline",
+    //         },
+    //     ]);
+    
+    //     $('.js-submit-btn').click(e =>{
+    //     e.preventDefault();
+
+    //     fancybox.close();
+    // });   
 })
 
-function isFormValid(form) {
-    let isValid = true 
 
-    if(!validation(form.elements.name)) {
-        isValid = false
-    }
-    if(!validation(form.elements.phone)) {
-        isValid = false
-    }
-    if(!validation(form.elements.comment)) {
-        isValid = false
-    }
-    return isValid
-}
 
-function validation(element) {
-    if(!element.checkValidity()) {
-        element.nextElementSibling.textContent = element.validationMessage
-        element.classList.add('form__input-error')
-        return false
-    }
-    else {
-        element.nextElementSibling.textContent = ''
-        element.classList.remove('form__input-error')
-        return true
-    }
-}
+
+
+
