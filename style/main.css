@@ -1615,3 +1615,115 @@ img {
   color: #000;
   font-weight: 700;
 }
+
+.products-menu-section {
+  background: url(../../img/wave.svg) center center/cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-blend-mode: darken;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: white;
+}
+
+.products-menu-section__title {
+  text-align: start;
+  margin-left: 4.6666666667rem;
+  margin-top: 6.0555555556rem;
+  color: white;
+}
+@media screen and (max-width: 480px) {
+  .products-menu-section__title {
+    margin-left: 0.5555555556rem;
+    font-size: 2.2222222222rem;
+  }
+}
+
+.products-menu__list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-menu__title {
+  position: relative;
+  width: 5.5555555556rem;
+}
+@media screen and (max-width: 480px) {
+  .products-menu__title {
+    width: 5rem;
+  }
+}
+.products-menu__title:after {
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.products-menu__title.products-menu-section__title {
+  position: absolute;
+  top: 6.2222222222rem;
+  left: 4.6666666667rem;
+  color: #fff;
+}
+
+.products-menu__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products-menu__text {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 60%;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+          transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: 2.6666666667rem;
+  font-weight: bold;
+  color: white;
+}
+
+.products-menu__content {
+  background: rgba(47, 50, 52, 0.9);
+  width: 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: width 0.7s;
+  transition: width 0.7s;
+}
+
+.products-menu__container {
+  padding: 1.7777777778rem 4.4444444444rem 2.1111111111rem 1.4444444444rem;
+}
+
+.products-menu__close {
+  position: absolute;
+  top: 1.1111111111rem;
+  right: 1.3888888889rem;
+  border: none;
+  background: transparent;
+}
