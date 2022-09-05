@@ -482,11 +482,6 @@ img {
     font-size: 1.8888888889rem;
   }
 }
-.section--name--contacts {
-  background: url("../img/map.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .headline {
   text-align: center;
@@ -1943,4 +1938,9 @@ img {
       -ms-flex-align: center;
           align-items: center;
   width: 3.2222222222rem;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
 }

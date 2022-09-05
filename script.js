@@ -14,6 +14,38 @@
         slider.goToNextSlide();
       })
 
+//map 
+
+let myMap; 
+const init = () => {
+    myMap = new ymaps.Map("map", {
+        center: [54.188259, 37.637909],
+        zoom: 14,
+        controls: []
+    });
+const coords = [
+[54.194398, 37.605738],
+[54.189724, 37.617155],
+[54.183599, 37.600009]
+];
+
+const myCollection = new ymaps.GeoObjectCollection({}, {
+    draggable: false, 
+    iconLayout: 'default#image',
+    iconImageHref: "./icons/map-icon.svg",
+    iconImageSize: [46, 57],
+    iconImageOffSet: [-35, -52]
+
+})
+
+coords.forEach(coord => {
+    myCollection.add(new ymaps.Placemark(coord));
+})
+myMap.geoObjects.add(myCollection);
+}
+
+ymaps.ready(init);
+
 // player 
 
 let player;
@@ -527,32 +559,5 @@ $("[data-scroll-to]").click(e => {
      
       }
 });
-
-
-//player 
-
-// let player;
-// let eventsInit = () => {
-
-// }
-
-// function onYouTubeIframeAPIReady() {
-//     player = new YT.Player('yt-player', {
-//     height: '405',
-//     width: '660',
-//     videoId: 'f4Mc-NYPHaQ',
-//     events: {
-    
-//     },
-
-//     playerVars: {
-//         controls: 0, 
-//         showinfo: 0, 
-//         rel: 0, 
-//     }
-//     });
-// }
-
-
 
 
