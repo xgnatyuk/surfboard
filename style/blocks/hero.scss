@@ -2,7 +2,7 @@
     background-image: url("../img/bg-image.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     min-height: rem(650px);
     color: white;
     @include tablets {

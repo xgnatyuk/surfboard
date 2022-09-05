@@ -31,8 +31,17 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -99,7 +108,7 @@ img {
   background-image: url("../img/bg-image.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   min-height: 36.1111111111rem;
   color: white;
 }
@@ -391,7 +400,7 @@ img {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 36.1111111111rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,14 +420,14 @@ img {
 }
 @media screen and (max-width: 768px) {
   .section {
-    height: 100vh;
+    height: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
 }
 @media screen and (max-width: 480px) {
   .section {
-    height: 100vh;
+    height: 100%;
   }
 }
 .section--name--order {
@@ -428,14 +437,14 @@ img {
 }
 @media screen and (max-width: 768px) {
   .section--name--order {
-    height: 100vh;
+    height: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
 }
 @media screen and (max-width: 480px) {
   .section--name--order {
-    height: 100vh;
+    height: 100%;
   }
 }
 .section--name--order .section__title {
@@ -970,6 +979,19 @@ img {
           transform: translate(-50%, -50%);
 }
 
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link {
+  border-color: black;
+}
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link::before {
+  content: "";
+  background: black;
+}
+
+.fixed-menu--shadowed .fixed-menu__link::before {
+  content: "";
+  background: black;
+}
+
 .hamburger {
   width: 26px;
   display: -webkit-inline-box;
@@ -1086,13 +1108,13 @@ img {
 }
 .products__arrow-left {
   position: absolute;
-  top: 34%;
+  top: 30%;
   left: 2%;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .products__arrow-left {
-    top: 33%;
+    top: 28%;
     left: 17%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1106,13 +1128,13 @@ img {
 }
 .products__arrow-right {
   position: absolute;
-  top: 34%;
+  top: 30%;
   right: 2%;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .products__arrow-right {
-    top: 33%;
+    top: 28%;
     left: 78%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1617,7 +1639,7 @@ img {
 }
 
 .products-menu-section {
-  background: url(../../img/wave.svg) center center/cover;
+  background: url(./img/wave.svg) center center/cover;
   background-repeat: no-repeat;
   position: relative;
   background-blend-mode: darken;

@@ -38,3 +38,25 @@
         }
     }
 }
+
+.fixed-menu--shadowed {
+    .fixed-menu__item--active {
+        .fixed-menu__link {
+        border-color: black;
+        &::before {
+            content: "";
+            background: black;
+        }
+        }
+    }
+    
+}
+
+.fixed-menu--shadowed {
+    .fixed-menu__link {
+        &::before {
+            content: "";
+            background: black; 
+        }
+    }
+}

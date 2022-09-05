@@ -11,12 +11,12 @@
 
     &__arrow-left {
         position: absolute;
-        top: 34%;
+        top: 30%;
         left: 2%;
         z-index: 1;
       
         @include tablets {
-          top: 33%;
+          top: 28%;
           left: 17%;
         }
       
@@ -28,12 +28,12 @@
       }
     &__arrow-right {
         position: absolute;
-        top: 34%;
+        top: 30%;
         right: 2%;
         z-index: 1;
       
         @include tablets {
-          top: 33%;
+          top: 28%;
           left: 78%;
         }
       

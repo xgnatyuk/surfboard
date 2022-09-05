@@ -1,5 +1,5 @@
 .section {
-    height: 100vh;
+    height: 100%;
     min-height: rem(650px);
     display: flex;
     flex-direction: column;
@@ -8,20 +8,20 @@
         height: 100%;
     }
     @include tablets {
-        height: 100vh;
+        height: 100%;
     }
     @include phones {
-        height: 100vh;
+        height: 100%;
     }
     &--name--order {
         background: url(../img/bg-form.png);
         background-repeat: no-repeat;
         background-size: cover;
         @include tablets {
-            height: 100vh;
+            height: 100%;
         }
         @include phones {
-            height: 100vh;
+            height: 100%;
         }
         .section__title {
             color: white;

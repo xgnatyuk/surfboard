@@ -18,32 +18,32 @@
 <body>
     <div class="wrapper">
         <div class="maincontent">
-            <section class="hero">
+            <section data-sidemenu-theme="white" data-section-id="hero" class="hero">
                 <div class="container hero__container">
                     <header class="header">
                         <img src="./img/surfboard-logo.svg" alt="sufboard logo" class="logo">
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">О нас</a>
+                                    <a href="#" data-scroll-to="benefits" class="menu__link">О нас</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Серфборды</a>
+                                    <a href="#" data-scroll-to="products" class="menu__link">Серфборды</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Команда</a>
+                                    <a href="#" data-scroll-to="team" class="menu__link">Команда</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Меню</a>
+                                    <a href="#" data-scroll-to="products-menu" class="menu__link">Меню</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Отзывы</a>
+                                    <a href="#" data-scroll-to="review" class="menu__link">Отзывы</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="#" class="menu__link">Как мы работаем</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Контакты</a>
+                                    <a href="#" data-scroll-to="map" class="menu__link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -67,7 +67,7 @@
                         </h1>
                         <h3 class="hero__desc">Самый большой выбор серфбордов в мире
                         </h3>
-                        <button class="btn">Заказать</button>
+                        <button data-scroll-to="order" class="btn">Заказать</button>
                     </div>
                     <div class="hero__icons-section">
                         <ul class="features">
@@ -101,7 +101,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section data-sidemenu-theme="black" data-section-id="benefits" class="section">
                 <div class="container">
                     <div class="headline">
                         <h1 class="section__title">Почему Surfboard?</h1>
@@ -157,7 +157,7 @@
 
                 </div>
             </section>
-            <section class="section section--name--product">
+            <section data-sidemenu-theme="black" data-section-id="products" class="section section--name--product">
                 <div class="container">
                   <div class="products__wrap-list">
                     <div class="profucts__arrows">
@@ -323,7 +323,7 @@
                 </div>
               </section>
 
-              <section data-section-id="menu" class="section products-menu-section">
+              <section data-sidemenu-theme="white" data-section-id="products-menu" data-section-id="menu" class="section products-menu-section">
                 <h1 class="section__title products-menu-section__title">Меню</h1>
                 <ul class="products-menu__list">
                   <li class="products-menu__item">
@@ -425,7 +425,7 @@
                 </ul>
             </section> -->
 
-            <section class="section">
+            <section data-sidemenu-theme="black" data-section-id="team" class="section">
                 <div class="container">
                     <h1 class="section__title">Команда</h1>
                     <div class="team">
@@ -507,7 +507,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section data-sidemenu-theme="black" data-section-id="review" class="section">
                 <div class="container">
                     <h1 class="section__title">Отзывы</h1>
 
@@ -578,7 +578,7 @@
                 </div>
             </section>
 
-            <section class="section section--name--order">
+            <section data-sidemenu-theme="white" data-section-id="order" class="section section--name--order">
                 <div class="container">
                     <h1 class="section__title">Закажите доставку</h1>
                     <div class="order__form">
@@ -700,13 +700,11 @@
                     </div>
                     </form>
                 </div>
-
-        </div>
         </section>
 
      
 
-        <section class="section section--name--contacts">
+        <section data-sidemenu-theme="black" data-section-id="map" class="section section--name--contacts">
         </section>
         <footer class="footer">
             <div class="footer__contacts">
@@ -761,36 +759,36 @@
         </footer>
         
     </div>
-
-    </div>
+    
+</div>
     <nav class="fixed-menu">
         <ul class="fixed-menu__list">
             <li class="fixed-menu__item fixed-menu__item--active">
-                <a href="#" class="fixed-menu__link fixed-menu__link"></a>
+                <a href="#" data-scroll-to="hero" class="fixed-menu__link fixed-menu__link"></a>
+            </li>
+            <li class="fixed-menu__item">
+                <a href="#" data-scroll-to="benefits" class="fixed-menu__link"></a>
+            </li>
+            <li class="fixed-menu__item">
+                <a href="#" data-scroll-to="products" class="fixed-menu__link"></a>
+            </li>
+            <li class="fixed-menu__item">
+                <a href="#" data-scroll-to="products-menu" class="fixed-menu__link"></a>
+            </li>
+            <li class="fixed-menu__item">
+                <a href="#" data-scroll-to="team" class="fixed-menu__link"></a>
+            </li>
+            <li class="fixed-menu__item">
+                <a href="#" data-scroll-to="review" class="fixed-menu__link"></a>
+            </li>
+            <li class="fixed-menu__item">
+                <a href="#" data-scroll-to="order" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
                 <a href="#" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
-            </li>
-            <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
-            </li>
-            <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
-            </li>
-            <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
-            </li>
-            <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
-            </li>
-            <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
-            </li>
-            <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
+                <a href="#" data-scroll-to="map" class="fixed-menu__link"></a>
             </li>
         </ul>
     </nav>
@@ -832,6 +830,7 @@
             <button class="btn js-submit-btn">Закрыть</button>
         </div>
     </div>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>

@@ -304,18 +304,6 @@ $('.form').submit(e => {
         }
     })
 }
-    // const fancybox = new Fancybox([
-    //         {
-    //           src: "#modal",
-    //           type: "inline",
-    //         },
-    //     ]);
-    
-    //     $('.js-submit-btn').click(e =>{
-    //     e.preventDefault();
-
-    //     fancybox.close();
-    // });   
 })
 
 
@@ -384,3 +372,144 @@ $('.form').submit(e => {
       }
     })
  
+// ops
+
+const sections = $("section");
+const display = $(".maincontent");
+const sideMenu = $(".fixed-menu");
+const menuItems = sideMenu.find(".fixed-menu__item");
+
+
+
+sections.first().addClass("active");
+
+const countSectionPosition = sectionEq => {
+    return sectionEq * -100;
+}
+
+const changeMenuThemeForSection = sectionEq => {
+    const currentSection = sections.eq(sectionEq);
+    const menuTheme = currentSection.attr("data-sidemenu-theme");
+    const activeClass = "fixed-menu--shadowed";
+
+    if(menuTheme === "black") {
+        sideMenu.addClass(activeClass)
+
+    } else {
+        sideMenu.removeClass(activeClass)
+
+    }
+}
+let inScroll = false; 
+
+const resectActiveClassForItem = (items, itemsEq, activeClass) => {
+    items.eq(itemsEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
+const performTransition = sectionEq => {
+    if (inScroll === false) {
+        
+        inScroll = true;
+       const position = countSectionPosition(sectionEq);
+
+    changeMenuThemeForSection(sectionEq);
+       
+    display.css({
+        transform: `translateY(${position}%)`,
+      })
+    
+    resectActiveClassForItem(sections, sectionEq, "active");
+
+   
+    setTimeout(() => {
+        inScroll = false;
+
+        resectActiveClassForItem(menuItems, sectionEq,"fixed-menu__item--active"); 
+
+    }, 1300);
+
+    }
+};
+
+const scrollViewport = direction => {
+
+    const activeSection = sections.filter(".active");
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === "next" && nextSection.length) {
+        performTransition(nextSection.index())
+
+    }
+
+    if (direction === "prev" && prevSection.length) {
+        performTransition(prevSection.index())
+    }
+}
+
+$(window).on("wheel", e => {
+    const deltaY = e.originalEvent.deltaY;
+    if (deltaY > 0) {
+        scrollViewport("next");
+        
+    }
+
+    if (deltaY < 0) {
+        scrollViewport("prev");
+       
+    }
+    console.log(deltaY);
+})
+
+
+$(window).on("kedydown", e => {
+
+const tagName = e.target.tagName.toLowerCase();
+if (tagName !== "input" && tagName !== "textarea") {
+     switch (e.keycode) {
+    case 38:
+        scrollViewport("prev");
+        break;
+ 
+    case 40:
+        scrollViewport ("next");
+        break;
+ }
+}
+
+})
+
+$(".wrapper").on("touchmove", e =>{
+    e.preventDefault();
+})
+
+$("[data-scroll-to]").click(e => {
+    e.preventDefault();
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-scroll-to");
+    const reqSection = $(`[data-section-id=${target}]`)
+
+    performTransition(reqSection.index());
+})
+
+
+        $("body").swipe( {
+        swipe: function
+        (event, 
+        direction
+        )
+    {
+       const scroller = viewportScroller();
+       let scrollDirection = "";
+       
+       if(direction === "up") scrollDirection = "next";
+       if(direction === "down") scrollDirection = "prev";
+
+       scroller[scrollDirection]();
+     
+      }
+});
+
+
+
+
