@@ -682,12 +682,19 @@ img {
 }
 .reviews__text {
   margin-bottom: 1.3888888889rem;
+  max-width: 25.6666666667rem;
 }
 @media screen and (max-width: 768px) {
   .reviews__text {
     margin-bottom: 0.8333333333rem;
+    max-width: 37.2222222222rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__text {
+    max-width: 22.2222222222rem;
   }
 }
 .reviews__author {

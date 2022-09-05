@@ -52,8 +52,13 @@
         }
         &__text {
             margin-bottom: rem(25px);
+            max-width: rem(462px);
             @include tablets {
                 margin-bottom: rem(15px);
+                max-width: rem(670px);
+            }
+            @include phones {
+                max-width: rem(400px);
             }
         }
         &__author {
