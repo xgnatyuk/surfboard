@@ -1,6 +1,9 @@
 .products {
     &__wrap-list {
       overflow: hidden;
+      position: relative;
+      padding: 0 40px;
+   
   
       .bx-wrapper {
         border: 0;
@@ -9,10 +12,11 @@
       }
     }
 
+
     &__arrow-left {
         position: absolute;
-        top: 30%;
-        left: 2%;
+        top: 40%;
+        left: 0%;
         z-index: 1;
       
         @include tablets {
@@ -28,8 +32,8 @@
       }
     &__arrow-right {
         position: absolute;
-        top: 30%;
-        right: 2%;
+        top: 40%;
+        right: 0%;
         z-index: 1;
       
         @include tablets {

@@ -40,7 +40,7 @@
                                     <a href="#" data-scroll-to="review" class="menu__link">Отзывы</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="#" class="menu__link">Как мы работаем</a>
+                                    <a href="#" data-scroll-to="player" class="menu__link">Как мы работаем</a>
                                 </li>
                                 <li class="menu__item">
                                     <a href="#" data-scroll-to="map" class="menu__link">Контакты</a>
@@ -578,6 +578,32 @@
                 </div>
             </section>
 
+            <section data-sidemenu-theme="black" data-section-id="player" class="section player-section">
+                <div class="container">
+                  <h2 class="section__title">Как мы работаем</h2>
+                  <div class="player-section__container">
+                    <div class="player">
+                      <div class="player__wrapper">
+                        <div id="yt-player" class="player__elem"></div>
+                        <div class="player__splash"></div>
+                      </div>
+                      <div class="player__controls">
+                        <button class="player__start"></button>
+                        <div class="player__playback">
+                          <button class="player__playback-button"></button>
+                        </div>
+                        <div class="player__volume-img">
+                          <img src="./icons/volume.svg" alt="" class="player__volume-icon">
+                        </div>
+                        <div class="player__volume">
+                          <div class="player__volume-progress">
+                            <button class="player__volume-button"></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </section>
             <section data-sidemenu-theme="white" data-section-id="order" class="section section--name--order">
                 <div class="container">
                     <h1 class="section__title">Закажите доставку</h1>
@@ -782,10 +808,10 @@
                 <a href="#" data-scroll-to="review" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
-                <a href="#" data-scroll-to="order" class="fixed-menu__link"></a>
+                <a href="#" data-scroll-to="player" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
-                <a href="#" class="fixed-menu__link"></a>
+                <a href="#" data-scroll-to="order" class="fixed-menu__link"></a>
             </li>
             <li class="fixed-menu__item">
                 <a href="#" data-scroll-to="map" class="fixed-menu__link"></a>
@@ -830,10 +856,11 @@
             <button class="btn js-submit-btn">Закрыть</button>
         </div>
     </div>
-    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./script.js"></script>
 </body>
 

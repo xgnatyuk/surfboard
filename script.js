@@ -14,7 +14,122 @@
         slider.goToNextSlide();
       })
 
+// player 
 
+let player;
+const playerContainer = $(".player");
+
+let eventsInit = () => {
+  $(".player__start").click(e => {
+    e.preventDefault();
+
+    if (playerContainer.hasClass("paused")) {
+      player.pauseVideo();
+    } else {
+      player.playVideo();
+    }
+  });
+
+  $(".player__playback").click(e => {
+    const bar = $(e.currentTarget);
+    const clickedPosition = e.originalEvent.layerX;
+    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+    const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+
+    $(".player__playback-button").css({
+      left: `${newButtonPositionPercent}%`
+    });
+
+    player.seekTo(newPlaybackPositionSec);
+  });
+
+  $(".player__splash").click(e => {
+    player.playVideo();
+  })
+
+  $(".player__volume").click(e => {
+    const barVolume = $(e.currentTarget);
+    const clickedPositionVolume = e.originalEvent.layerX;
+    const newButtonPositionVolume = (100 * clickedPositionVolume / barVolume.width());
+    player.setVolume(newButtonPositionVolume);
+
+    $(".player__volume-button").css({
+      left: `${newButtonPositionVolume}%`
+    });
+  });
+};
+
+const formatTime = timeSec => {
+  const roundTime = Math.round(timeSec);
+
+  const minutes = addZero(Math.floor(roundTime / 60));
+  const seconds = addZero(roundTime - minutes * 60);
+
+  function addZero(num) {
+    return num < 10 ? `0${num}` : num;
+  }
+
+  return `${minutes} : ${seconds}`;
+}
+
+const onPlayerReady = () => {
+  let interval;
+  const durationSec = player.getDuration();
+
+  $(".player__duration-estimate").text(formatTime(durationSec));
+
+  if (typeof interval !== "undefined") {
+    clearInterval(interval);
+  }
+
+  interval = setInterval(() => {
+    const completedSec = player.getCurrentTime();
+    const completedPercent = (completedSec / durationSec) * 100;
+
+    $(".player__playback-button").css({
+      left: `${completedPercent}%`
+    });
+
+    $(".player__duration-competed").text(formatTime(completedSec));
+  }, 1000);
+}
+
+const onPlayerStateChange = event => {
+ 
+  switch (event.data) {
+    case 1:
+      playerContainer.addClass("active");
+      playerContainer.addClass("paused");
+      break;
+
+    case 2:
+      playerContainer.removeClass("active");
+      playerContainer.removeClass("paused");
+      break;
+  }
+};
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: "392",
+    width: "662",
+    videoId: "oANeSfTDaoo",
+    events: {
+      "onReady": onPlayerReady,
+      "onStateChange": onPlayerStateChange
+    },
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      showinfo: 0,
+      rel: 0,
+      autoplay: 0,
+      modestbranding: 0
+    }
+  });
+}
+
+eventsInit();
 
 // fullscreen menu
 class FullMenu {
@@ -81,103 +196,6 @@ for (let i = 0; i < teamMember.length; i++) {
         }
     });
 };
-
-// form validation 
-
-// const form = document.querySelector('#form_order')
-// const phone = document.querySelector('#phone')
-// const sendBtn = document.querySelector('#send_btn')
-
-// phone.addEventListener('keydown', (e) => {
-// try {
-//     let isDigit = false 
-//     let isPlus = false 
-//     let isDash = false 
-//     let isAction = false
-
-//     if(e.key >= 0 || e.key <= 9) {
-//        isDigit = true
-//     }
-
-//     if (e.key == '+') {
-//         isPlus = true
-//     }
-
-//     if (e.key == '-') {
-//         isDash = true
-//     }
-
-//     if (e.key == 'ArrowRight' || 
-//         e.key == 'ArrowLeft' ||
-//         e.key == 'Backspace'
-//     ) { 
-//         isAction = true
-//     }
-
-//     if(!isDigit && !isPlus && !isDash && !isAction) {
-//     throw new Error ('Можно вводить только цифры, +, -')
-//     }
-//     e.target.nextElementSibling.textContent = ''
-//     e.target.classList.remove('form__input-error')
-
-// } catch (error) {
-//     e.target.nextElementSibling.textContent = error.message
-//     e.target.classList.add('form__input-error')
-//     e.preventDefault()
-    
-// }
-
-// })
-
-
-// sendBtn.addEventListener('click', (e) => {
-//     e.preventDefault()
-//     if(isFormValid(form)) {
-//         console.log('send to server')
-//     }
-//     else {
-//         console.log('do not send to server, form is invalid')
-//     }
-// })
-
-// function isFormValid(form) {
-//     let isValid = true 
-
-//     if(!validation(form.elements.name)) {
-//         isValid = false
-//     }
-//     if(!validation(form.elements.phone)) {
-//         isValid = false
-//     }
-//     if(!validation(form.elements.comment)) {
-//         isValid = false
-//     }
-//     return isValid
-// }
-
-// function validation(element) {
-//     if(!element.checkValidity()) {
-//         element.nextElementSibling.textContent = element.validationMessage
-//         element.classList.add('form__input-error')
-//         return false
-//     }
-//     else {
-//         element.nextElementSibling.textContent = ''
-//         element.classList.remove('form__input-error')
-//         return true
-//     }
-// }
-
-// modal 
-
-// $('.form').submit(e => {
-//     e.preventDefault();
-//     const fancybox = Fancybox.show(
-//         {
-//           src: "#modal",
-//           type: "inline",
-//         })
-//     });
 
 
 // form 
@@ -509,6 +527,31 @@ $("[data-scroll-to]").click(e => {
      
       }
 });
+
+
+//player 
+
+// let player;
+// let eventsInit = () => {
+
+// }
+
+// function onYouTubeIframeAPIReady() {
+//     player = new YT.Player('yt-player', {
+//     height: '405',
+//     width: '660',
+//     videoId: 'f4Mc-NYPHaQ',
+//     events: {
+    
+//     },
+
+//     playerVars: {
+//         controls: 0, 
+//         showinfo: 0, 
+//         rel: 0, 
+//     }
+//     });
+// }
 
 
 
